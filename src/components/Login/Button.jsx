@@ -4,7 +4,7 @@ const Button = ({
     onClick,
     // props,
     text,
-    color,
+    color
 }) => {
     return (
         <button

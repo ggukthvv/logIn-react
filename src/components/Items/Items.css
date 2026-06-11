@@ -1,0 +1,21 @@
+.items {
+    width: 280px;
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 12px;
+    gap: 8px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    margin-left: 20px,
+}
+
+.items:hover {
+    background-color: #5C08C2;
+    cursor: pointer
+}
