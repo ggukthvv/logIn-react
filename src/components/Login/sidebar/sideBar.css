@@ -19,16 +19,17 @@
     margin: 20px;
 }
 
-.lower_container {
+/* .lower_container {
+    
+    position: relative
+} */
+
+.main {
     display: grid;
     justify-content: start;
     align-items: center;
-    position: relative
-}
-
-.main {
     position: absolute;
-    top: 300px
+    bottom: 60px;
 }
 
 .profilepic {

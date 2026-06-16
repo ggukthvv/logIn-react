@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Input from '../../components/Login/Input';
-import Button from '../../components/Login/Button';
-
+import Button from '../../components/Login/Button/Button';
+import './login.css'
 const LoginPage = () => {
 
 
@@ -51,29 +51,9 @@ const LoginPage = () => {
 
 
     return (
-        <div style={{
-            backgroundImage: 'url("backg.png")',
-            height: '100vh',
-            display: 'grid',
-            justifyContent: 'center',
-            alignItems: 'center',
-        }} >
-            <div style={{
-                display: 'grid',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '64px 40px 64px 40px',
-                border: '1px solid grey',
-                borderRadius: 24,
-                width: 460,
-                height: 519,
-                gap: 30
-            }}>
-                <div style={{
-                    display: 'grid',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }} >
+        <div className='login_cont' >
+            <div className='login_cont_main'>
+                <div className='login_cont_logo' >
                     <svg width="140" height="16" viewBox="0 0 140 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7264_10812)">
                             <g clip-path="url(#clip1_7264_10812)">
@@ -97,46 +77,44 @@ const LoginPage = () => {
                             </clipPath>
                         </defs>
                     </svg >
-
-                </div>
-                <p style={{ color: 'white', fontSize: 24, fontWeight: 400, fontFamily: 'sans-serif', textAlign: 'center' }}>Welcome to Wilco admin!</p>
-                {/* <p>{infoValid}</p> */}
-                <p style={{ color: '#c63838', fontSize: 14, fontWeight: 400, fontFamily: 'sans-serif' }}>{errorMessage}</p>
-                <div>
-                    <label style={{ color: '#FFFFFF99', fontSize: 12, fontWeight: 400, fontFamily: 'sans-serif' }}>Email</label>
-                    <Input
-                        type='email'
-                        placeholder='Enter your email'
-                        value={email}
-                        onChange={hadleEmailChange}
-                        required
-                    />
+                    <p className='login_cont_uppertext'>Welcome to Wilco admin!</p>
+                    {/* <p>{infoValid}</p> */}
                 </div>
 
-                <div style={{ position: 'relative', width: 200 }}>
-                    <label style={{ color: '#FFFFFF99', fontSize: 12, fontWeight: 400, fontFamily: 'sans-serif' }}>Password</label>
-                    <Input
-                        type={clickValue}
-                        placeholder='Enter your password'
-                        required
-                        value={password}
-                        onChange={handlePasswordChange}
-                    />
-                    <div onClick={handleEyeClick}>
-                        <svg
-                            style={{
-                                position: 'absolute',
-                                top: 38,
-                                left: 350,
-                            }} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.0019 10.8881C6.40857 10.8881 5.11523 9.59475 5.11523 8.00141C5.11523 6.40808 6.40857 5.11475 8.0019 5.11475C9.59523 5.11475 10.8886 6.40808 10.8886 8.00141C10.8886 9.59475 9.59523 10.8881 8.0019 10.8881ZM8.0019 6.11475C6.9619 6.11475 6.11523 6.96141 6.11523 8.00141C6.11523 9.04141 6.9619 9.88808 8.0019 9.88808C9.0419 9.88808 9.88857 9.04141 9.88857 8.00141C9.88857 6.96141 9.0419 6.11475 8.0019 6.11475Z" fill="white" fill-opacity="0.6" />
-                            <path d="M7.99875 14.0135C5.49208 14.0135 3.12542 12.5468 1.49875 10.0002C0.792083 8.90015 0.792083 7.10682 1.49875 6.00015C3.13208 3.45348 5.49875 1.98682 7.99875 1.98682C10.4987 1.98682 12.8654 3.45348 14.4921 6.00015C15.1988 7.10015 15.1988 8.89348 14.4921 10.0002C12.8654 12.5468 10.4987 14.0135 7.99875 14.0135ZM7.99875 2.98682C5.84542 2.98682 3.78542 4.28015 2.34542 6.54015C1.84542 7.32015 1.84542 8.68015 2.34542 9.46015C3.78542 11.7201 5.84542 13.0135 7.99875 13.0135C10.1521 13.0135 12.2121 11.7201 13.6521 9.46015C14.1521 8.68015 14.1521 7.32015 13.6521 6.54015C12.2121 4.28015 10.1521 2.98682 7.99875 2.98682Z" fill="white" fill-opacity="0.6" />
-                        </svg>
+                <div className='login_cont_inputs'>
+                    <p className='login_cont_lowertext'>{errorMessage}</p>
+                    <div>
+                        <label className='login_cont_label'>Email</label>
+                        <Input
+                            type='email'
+                            placeholder='Enter your email'
+                            value={email}
+                            onChange={hadleEmailChange}
+                            required
+                        />
+                    </div>
+
+                    <div className='login_cont_labelDiv'>
+                        <label className='login_cont_label'>Password</label>
+                        <Input
+                            type={clickValue}
+                            placeholder='Enter your password'
+                            required
+                            value={password}
+                            onChange={handlePasswordChange}
+                        />
+                        <div onClick={handleEyeClick}>
+                            <svg className='login_cont_svg' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.0019 10.8881C6.40857 10.8881 5.11523 9.59475 5.11523 8.00141C5.11523 6.40808 6.40857 5.11475 8.0019 5.11475C9.59523 5.11475 10.8886 6.40808 10.8886 8.00141C10.8886 9.59475 9.59523 10.8881 8.0019 10.8881ZM8.0019 6.11475C6.9619 6.11475 6.11523 6.96141 6.11523 8.00141C6.11523 9.04141 6.9619 9.88808 8.0019 9.88808C9.0419 9.88808 9.88857 9.04141 9.88857 8.00141C9.88857 6.96141 9.0419 6.11475 8.0019 6.11475Z" fill="white" fill-opacity="0.6" />
+                                <path d="M7.99875 14.0135C5.49208 14.0135 3.12542 12.5468 1.49875 10.0002C0.792083 8.90015 0.792083 7.10682 1.49875 6.00015C3.13208 3.45348 5.49875 1.98682 7.99875 1.98682C10.4987 1.98682 12.8654 3.45348 14.4921 6.00015C15.1988 7.10015 15.1988 8.89348 14.4921 10.0002C12.8654 12.5468 10.4987 14.0135 7.99875 14.0135ZM7.99875 2.98682C5.84542 2.98682 3.78542 4.28015 2.34542 6.54015C1.84542 7.32015 1.84542 8.68015 2.34542 9.46015C3.78542 11.7201 5.84542 13.0135 7.99875 13.0135C10.1521 13.0135 12.2121 11.7201 13.6521 9.46015C14.1521 8.68015 14.1521 7.32015 13.6521 6.54015C12.2121 4.28015 10.1521 2.98682 7.99875 2.98682Z" fill="white" fill-opacity="0.6" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
 
-                <p style={{ color: 'white', fontSize: 12, fontWeight: 400, fontFamily: 'sans-serif', textAlign: 'end' }}>Forgot password?</p>
+
+                <p className='login_cont_passtext'>Forgot password?</p>
                 <Button type='submit' text='Log in' color='#6400DC' onClick={handleButtonClick} />
             </div>
         </div >

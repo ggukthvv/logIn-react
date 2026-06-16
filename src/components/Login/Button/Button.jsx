@@ -1,5 +1,5 @@
 // import React from 'react'
-
+import './button.css'
 const Button = ({
     onClick,
     // props,
@@ -7,16 +7,11 @@ const Button = ({
     color
 }) => {
     return (
-        <button
+        <button className="button"
             // type={props.type}
             onClick={onClick}
             style={{
-                width: 380,
-                height: 48,
-                borderRadius: 100,
-                backgroundColor: 'white',
-                fontSize: 16,
-                fontWeight: 500,
+
                 // color: '#6400DC'
                 color: color
             }}> {text}

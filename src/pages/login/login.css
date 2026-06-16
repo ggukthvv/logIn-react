@@ -1,0 +1,86 @@
+.login_cont {
+    background-image: url("backg.png");
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center
+}
+
+.login_cont_main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 40px 64px 40px;
+    border: 1px solid grey;
+    border-radius: 24px;
+    width: 460px;
+    height: 519px;
+    gap: 30px;
+}
+
+.login_cont_logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.login_cont_uppertext {
+    color: white;
+    font-size: 24px;
+    font-weight: 400px;
+    font-family: sans-serif;
+    text-align: center
+}
+
+.login_cont_lowertext {
+    color: #c63838;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sans-serif
+}
+
+.login_cont_label {
+    color: #FFFFFF99;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: sans-serif
+}
+
+.login_cont_svg {
+    position: absolute;
+    top: 38px;
+    left: 350px;
+}
+
+.login_cont_passtext {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-align: end
+}
+
+.login_cont_labelDiv {
+    position: relative;
+    width: 200px
+}
+
+.login_cont_inputs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .login_cont_main {
+        /* background-color: red; */
+        width: 300px;
+    }
+
+    .login_cont_inputs {}
+
+
+}
